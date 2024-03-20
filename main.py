@@ -2,21 +2,21 @@
 # Author: Sean Parrell
 # Date: 3/19/2024
 
-def encode(password):
+def encode(password): # function used for option 1 (encodes input)
     encoded_password = ''
     for digit in password:
         encoded_digit = str((int(digit) + 3) % 10)  # Shifting each digit up by 3
         encoded_password += encoded_digit
     return encoded_password
 
-def decode(encoded_password):
+def decode(encoded_password): # function used for option 2 (decoding)
     decoded_password = ''
     for digit in encoded_password:
         decoded_digit = str((int(digit) - 3) % 10)  # Shifting each digit down by 3
         decoded_password += decoded_digit
     return decoded_password
 
-def main():
+def main(): # main function loop, printing menu and gives process for each user selection 1-3
     while True:
         print("\nMenu\n-------------")
         print("1. Encode")
